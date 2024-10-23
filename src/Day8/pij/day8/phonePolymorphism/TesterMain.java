@@ -1,7 +1,5 @@
 package pij.day8.phonePolymorphism;
 
-import pij.day8.SimpleTester;
-
 public class TesterMain {
     public static void main(String[] args) {
         OldPhone old = new OldPhone("ACME classic");

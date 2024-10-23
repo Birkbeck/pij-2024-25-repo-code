@@ -1,8 +1,5 @@
 package pij.day8.phonePolymorphism;
 
-import pij.day8.MobilePhone;
-import pij.day8.SimpleTester;
-
 public class SpecialTester extends SimpleTester {
     public void test(OldPhone p) {
         System.out.println("special test old");
