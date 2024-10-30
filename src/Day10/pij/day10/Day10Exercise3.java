@@ -31,4 +31,12 @@ public class Day10Exercise3 {
             e.printStackTrace();
         }
     }
+
+    public static void main(String[] args) {
+        Day10Exercise3 launcher = new Day10Exercise3();
+        //launcher.launch(0);
+        //launcher.launch(2);
+        //launcher.launch(4);
+        //launcher.launch(6);
+    }
 }
