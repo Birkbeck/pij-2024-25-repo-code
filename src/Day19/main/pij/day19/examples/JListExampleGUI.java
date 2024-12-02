@@ -29,7 +29,7 @@ public class JListExampleGUI {
         JLabel outputLabel = new JLabel("Nothing selected yet!");
         String[] words = { "Alfa", "Bravo", "Charlie", "Echo", "Foxtrot",
                 "Golf", "Hotel", "India", "Juliett", "Kilo", "Lima" };
-        JList<String> list = new JList(words);
+        JList<String> list = new JList<String>(words);
         //list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         list.addListSelectionListener((lse) -> {
             int[] selected = list.getSelectedIndices();
