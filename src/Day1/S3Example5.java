@@ -1,9 +1,16 @@
-        if (examMark >= 50) 
+public class S3Example5 {
+    public static void main(String[] args) {
+        java.util.Scanner scan = new java.util.Scanner(System.in);
+        System.out.print("Please key in your exam mark: ");
+        int examMark = scan.nextInt();
+        if (examMark >= 50)
         {
             System.out.println("A satisfactory result!");
             System.out.println("You may proceed with your project.");
-        } 
-        else 
+        }
+        else
         {
             System.out.println("I'm afraid you have failed.");
         }
+    }
+}

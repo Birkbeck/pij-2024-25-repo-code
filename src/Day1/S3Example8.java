@@ -1,3 +1,8 @@
+public class S3Example8 {
+    public static void main(String[] args) {
+        java.util.Scanner scan = new java.util.Scanner(System.in);
+        System.out.print("Please key in your exam mark: ");
+        int examMark = scan.nextInt();
         if (examMark < 0 || examMark > 100) {
             System.out.println("Invalid mark entered - needs to be in the range 0..100");
         } else if (examMark >= 70) {
@@ -9,3 +14,5 @@
         } else {
             System.out.println("Sorry, you have failed.");
         }
+    }
+}
