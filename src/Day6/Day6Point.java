@@ -2,7 +2,7 @@
  * Implementation of the geometrical concept of a point in two dimensions.
  * Provides methods to access the coordinates as well as to move a point.
  */
-public class Point {
+public class Day6Point {
     private int x;
     private int y;
 
@@ -12,7 +12,7 @@ public class Point {
      * @param x the x coordinate of the new Point
      * @param y the y coordinate of the new Point
      */
-    public Point(int x, int y) {
+    public Day6Point(int x, int y) {
         this.x = x;
         this.y = y;
     }
@@ -40,7 +40,7 @@ public class Point {
      *
      * @param remote the Point to which we want to move this Point
      */
-    public void moveTo(Point remote) {
+    public void moveTo(Day6Point remote) {
         this.x = remote.x;
         this.y = remote.y;
     }
