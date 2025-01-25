@@ -3,6 +3,7 @@ package pij.day14.tree;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 
 /**
@@ -31,7 +32,8 @@ public class Position {
     private final List<Direction> directions;
 
     /**
-     * Constructs an empty Position, corresponding to the root of a Tree.
+     * Constructs an empty Position (with size 0), corresponding to the root
+     * of a Tree.
      */
     public Position() {
         this(Collections.emptyList());
@@ -43,9 +45,17 @@ public class Position {
      * @param directions indicates the Directions this Position will represent;
      *                   may be modified after the constructor call without
      *                   affecting this Position
+     * @throws NullPointerException if directions is null or contains null
      */
     public Position(List<Direction> directions) {
+        sanityCheck(directions);
         this.directions = new ArrayList<>(directions);
+    }
+
+    private static void sanityCheck(List<Direction> directions) {
+        for (Direction d : directions) {
+            Objects.requireNonNull(d, "Direction must not be null!");
+        }
     }
 
     /**
@@ -85,4 +95,22 @@ public class Position {
     public String toString() {
         return this.directions.toString();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || this.getClass() != o.getClass()) {
+            return false;
+        }
+        Position position = (Position) o;
+        return Objects.equals(this.directions, position.directions);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(this.directions);
+    }
+
 }
